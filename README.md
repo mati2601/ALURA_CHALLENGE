@@ -12,7 +12,7 @@
 <h2> Vista escritorio </h2>
 
 - Estado inicial
-<img src="imagenes/desktop_view.png"  alt="Desktop" width="1000px" height="650px" >
+<img src="desktop_view.png"  alt="Desktop" width="1000px" height="650px" >
 
 - Encriptar
 <img src="imagenes/desktop_view2.png"  alt="Desktop" width="1000px" height="650px" >
