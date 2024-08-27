@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Encriptador</title>
+</head>
+<body>
+
+    <main class="container__main">
+        <scroll-container>
+            <scroll-page id="page-0">
+                <section class="container__izquierdo">
+                    <img src="imagenes/Logo.png" id="logo" alt="Alura" width="120px" height="48px" >
+                </section>
+            </scroll-page>
+
+
+
+        
+
+            <scroll-page id="page-1">
+                <section class=" container__central">
+                    <div class="input">
+                        <textarea class="textarea"
+                        required 
+                        oninput="validarInput(this) , condicionesIniciales()"
+                        id="textoInput"  
+                        type="text" 
+                        placeholder="Ingrese el texto aqui" 
+                
+                        title=""></textarea>
+                    </div>
+
+                    <div>
+                        <p class="texto-advertencia">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                            </svg> Solo letras minúsculas y sin acentos.
+                        </p>
+                    </div>
+
+                    <div class="container__botones">
+                        <a href="#page-2"><button onclick="cifrar()" id="cifrar-id" class="cifrar"  disabled>CODIFICAR</button></a>
+                        <a href="#page-2"><button onclick="descifrar()" id="descifrar-id" class="descifrar" disabled>DECODIFICAR</button></a>
+                    </div>
+                    
+                </section>
+            </scroll-page>
+
+            <scroll-page id="page-2">
+                <section class="container__derecho">
+                    <div class="rectangulo" id="rectangulos">
+                        <div id="muñeco" class="muñeco__imagen">
+                            <img src="imagenes/Muñeco.png"  class="container__Muñeco">
+                        </div>             
+            
+                        <div class="container__parrafo-Informativo" id="texto-cifrado">
+                            <p id="texto-sin-ingresar">Ningún mensaje fue encontrado</p>
+                            <p class="texto__des__cifrado" id="ingrese-texto">Ingresa el texto que desees encriptar o desencriptar.</p>
+                        </div>
+                        <div id="boton-copiar">
+                            <button onclick="copiarTexto()" id="copiar" class="container__boton__copiar">Copiar</button>
+                        </div>
+                    </div>
+                </section>
+            </scroll-page>
+
+        </scroll-container>
+
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por Matias Sanchez. Alura classmate. 2024</p>
+    </footer>
+    <script src="app.js"> </script>
+</body>
+
+</html>
